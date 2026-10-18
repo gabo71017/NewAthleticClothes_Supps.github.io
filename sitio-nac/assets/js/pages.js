@@ -66,8 +66,8 @@
     const news = lim(C.sortProducts(C.getNew()), S.home.newLimit);
     main.innerHTML =
       '<h1 class="sr-only">' + esc(S.name) + " — Suplementos deportivos en Colombia</h1>" +
-      S.hero.map(heroBanner).join("") +
-      S.heroStrips.map(strip).join("") +
+      '<div class="hero-row">' + S.hero.map(heroBanner).join("") + "</div>" +
+      '<div class="strip-row">' + S.heroStrips.map(strip).join("") + "</div>" +
       section("Suplementos más vendidos", best, 4) +
       (S.bannerRows[0] ? bannerRow(S.bannerRows[0]) : "") +
       section("Suplementos en oferta", offers, 4, "ofertas.html") +
